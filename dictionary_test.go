@@ -22,11 +22,13 @@ func TestSearch(t *testing.T) {
 }
 
 func TestAdd(t *testing.T) {
-	dictionary := Dictionary{}
-	word := "test"
-	definition := "this is just a test"
-	dictionary.Add(word, definition)
-	assertDefinition(t, dictionary, word, definition)
+	t.Run("A Dictionary shall allow words and definitions to be added.", func(t *testing.T) {
+		dictionary := Dictionary{}
+		word := "test"
+		definition := "this is just a test"
+		dictionary.Add(word, definition)
+		assertDefinition(t, dictionary, word, definition)
+	})
 }
 
 func assertStrings(t testing.TB, got, want string) {
