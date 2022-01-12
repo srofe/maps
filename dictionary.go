@@ -3,7 +3,7 @@ package main
 type Dictionary map[string]string
 type DictionaryErr string
 
-var (
+const (
 	ErrNotFound   = DictionaryErr("could not find the word you are looking for")
 	ErrWordExists = DictionaryErr("cannot add word because it already exists")
 )
