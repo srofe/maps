@@ -46,3 +46,7 @@ func (dictionary Dictionary) Update(word, definition string) error {
 	}
 	return nil
 }
+
+func (dictionary Dictionary) Delete(word string) {
+	delete(dictionary, word)
+}
